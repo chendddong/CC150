@@ -147,12 +147,12 @@ Memory limit exceeded usually caused by you create a 2D-array which is unnecessa
 
 
 public class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public ListNode addLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;
         }
 
-        ListNode hed = new ListNode(0);
+        ListNode head = new ListNode(0);
         ListNode point = head;
         int carry = 0;
 
