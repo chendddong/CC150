@@ -199,5 +199,41 @@ A must repeat!
 */
 
 
-// Solution #1
+// Solution #2 by the author
+// We can implement this recursively by adding node by node, 
+// just as we would digit by digit.
+// 1. 2. 3.
+// result.data = (node1 + node2 + any earlier carry) % 10
+// if node1 + node2 > 10, then carry a 1 to the next addition. 
+// add the tails of the two nodes, passing along the carry.
+public class Solution {
+    public ListNode addLists(ListNode l1, ListNode l2, int carry) {
+        if (l1 == null && l2 == null) {
+            return null;
+        }
+        // apperently, this has a different constructer
+        ListNode result = new ListNode(carry, null, null);
+        if (l1 != null) {
+            value += l1.val;
+        }
+        if (l2 != null) {
+            value += l2.val;
+        }
+
+        result.val = value % 10;
+        ListNode more = addLists(l1 == null ? null : l1.next,
+                                 l2 == null ? null : l2.next,
+                                 value > 10 ? 1 : 1);
+        result.setNext(more);
+        return result;
+    }
+}
+
+/*
+It is interesting though I have no idea how the constructor looks like
+and the code is concise this way using ? and : sometimes is good for shorten
+the code of course
+*/
+
+
 
