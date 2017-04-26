@@ -210,5 +210,7 @@ class Solution {
 /* 
 This whole thought is great , have to revisit this 
 and draw something out of this.
+
+This kind of node has a above and bottom.
 */
     
