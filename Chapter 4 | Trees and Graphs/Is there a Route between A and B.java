@@ -33,7 +33,7 @@ class Solution {
 		}
 
 		start.state = State.Visiting;
-		q.push(start);
+		q.offer(start);
 		Node u;
 
 		while (!q.isEmpty()) {
@@ -45,7 +45,7 @@ class Solution {
 							return true;
 						} else {
 							v.state = State.Visiting;
-							q.push(v);
+							q.offer(v);
 						}
 					}
 				}
@@ -56,3 +56,7 @@ class Solution {
 		return false;
 	}
 }
+
+/* 
+Classic BFS must know,
+*/
