@@ -14,11 +14,23 @@ class Solution {
     public static int updateBits(int n, int m, int i, int j) {
         int max = ~0; /* All 1's */
 
+        // 1's trough position j, then 0's
+        int left = max - (1 << j) - 1);
 
+        // 1's after position i
+        int right = ((1 << i) - 1);
+
+        // 1's, with 0s between i and j
+        int mask = left | right;
+
+        // clear i through j, them put m in there
+        return (n & mask) | (m << i);
     }
 }
 
 /*
-1 Byte == 8bits
-
+This is mindblowing
+1. remember that the postion is from the back of the number
+for example: 10000000000 with i = 2 ; j = 6
+                 j   i
 */
