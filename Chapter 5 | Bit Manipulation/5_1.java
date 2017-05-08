@@ -21,7 +21,7 @@ class Solution {
         int right = ((1 << i) - 1);
 
         // 1's, with 0s between i and j
-        int mask = left | right;
+        int mask = left | right;29999982
 
         // clear i through j, them put m in there
         return (n & mask) | (m << i);
