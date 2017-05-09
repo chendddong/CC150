@@ -13,6 +13,7 @@
 // O(N) + O(N/2) + O(N/4) + O(N/8) + ... = O(2N) = O(N)
 // Our run-time is O(N).
 
+
 class Solution {
     public int findMissing(ArrayList<BitInteger> array) {
         return findMissing(array, BitInteger.INTEGER_SIZE - 1);

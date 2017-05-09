@@ -18,6 +18,7 @@ class Solution {
      */
     public int updateBits(int n, int m, int i, int j) {
         // write your code here
+        
         int max = ~0; /* All 1’s */
         // 1’s through position j, then 0’s
         if (j == 31)
@@ -39,4 +40,6 @@ This is mindblowing
 1. remember that the postion is from the back of the number
 for example: 10000000000 with i = 2 ; j = 6
                  j   i
-*/
+*/ 
+
+
